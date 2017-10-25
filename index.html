@@ -2,40 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TicTacToe</title>
+    <title>Awesome Tic Tac Toe game</title>
     <style>
-        .cells {
-            width: 5rem;
-            height: 5rem;
+        .cells{
+            width: 4rem;
+            height: 4rem;
             text-align: center;
-            font-family: sans-serif;
-            font-size: 250%;
+            font-size: 2rem;
             font-weight: bold;
+            cursor: pointer;
+            background-color: black;
+            color: white;
         }
+        #gameBoard {
+            display: none;
+        }
+        #startNewGame {
+             display: none;   
+        }
+        
     </style>
+    
 </head>
 <body>
-    <table id="gameBoard" border="1">
+  <h1>Before starting the game players should choose between X or O</h1>
+   
+   <input type="button" id="startGame" value="Start game" onclick="newGame.startGame()">
+   <input type="button" id="startNewGame" value="Start a new game" onclick="newGame.startNewGame()">
+   
+   <h3 id="message"></h3>
+    <table border="1" id="gameBoard">
         <tr>
-            <td class="cells">x</td>
-            <td class="cells">x</td>
-            <td class="cells">x</td>
+            <td class="cells" id="num1" onclick="newGame.play(this)"></td>
+            <td class="cells" id="num2" onclick="newGame.play(this)"></td>
+            <td class="cells" id="num3" onclick="newGame.play(this)"></td>
         </tr>
         <tr>
-            <td class="cells">x</td>
-            <td class="cells">x</td>
-            <td class="cells">x</td>
+            <td class="cells" id="num4" onclick="newGame.play(this)"></td>
+            <td class="cells" id="num5" onclick="newGame.play(this)"></td>
+            <td class="cells" id="num6" onclick="newGame.play(this)"></td>
         </tr>
         <tr>
-            <td class="cells">x</td>
-            <td class="cells">x</td>
-            <td class="cells">x</td>
+            <td class="cells" id="num7" onclick="newGame.play(this)"></td>
+            <td class="cells" id="num8" onclick="newGame.play(this)"></td>
+            <td class="cells" id="num9" onclick="newGame.play(this)"></td>
         </tr>
     </table>
     
     
+    
     <script src="ticTacToe.js"></script>
     <script src="main.js"></script>
-
 </body>
 </html>
+
+
+
+
+
