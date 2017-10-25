@@ -1,19 +1,12 @@
 
 
 
-function createGame() {
-    this.board = document.getElementById('gameBoard');
+function createGame(element) {
+    this.board = element;
     this.playerOne = 'X';
     this.playerTwo = 'O';
 }
 
-
-
-
-
-
-let blaGame = new createGame;
-console.log(blaGame.board);
-
-
-module.exports = createGame;
+if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
+    module.exports = createGame;
+}
