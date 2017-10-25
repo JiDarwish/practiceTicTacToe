@@ -7,5 +7,6 @@ function createGame(element) {
     this.playerTwo = 'O';
 }
 
-
-module.exports = createGame;
+if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
+    module.exports = createGame;
+}
