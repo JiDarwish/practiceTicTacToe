@@ -28,6 +28,7 @@ createGame.prototype.startNewGame = function () {
     this.winner = false;
     this.turn = '';
     this.clearAll();
+    this.startGame();
 }
 
 //once a cell is clicked by whtever player
