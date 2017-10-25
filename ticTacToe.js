@@ -1,5 +1,4 @@
-
-function createGame(element,body) {
+function createGame(element, body) {
     this.body = body;
     this.board = element;
     this.playerOne = 'X';
@@ -87,21 +86,16 @@ createGame.prototype.message = function (mes) {
 }
 
 //Will clear all the boxes once called
-createGame.prototype.clearAll = function(){
+createGame.prototype.clearAll = function () {
     console.log();
-    for(let i = 0; i <= 9; i++){
-        if(document.getElementById('num'+i) != null){
-        document.getElementById('num' + i).innerHTML = '';
+    for (let i = 0; i <= 9; i++) {
+        if (document.getElementById('num' + i) != null) {
+            document.getElementById('num' + i).innerHTML = '';
         }
     }
 }
 
 //Exporting the createGame function
-if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
+if (typeof module !== 'undefined' && module.hasOwnProperty('exports')) {
     module.exports = createGame;
 }
-
-
-
-
-

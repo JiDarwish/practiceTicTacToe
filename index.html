@@ -3,34 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Awesome Tic Tac Toe game</title>
-    <style>
-        .cells{
-            width: 4rem;
-            height: 4rem;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            background-color: black;
-            color: white;
-        }
-        #gameBoard {
-            display: none;
-        }
-        #startNewGame {
-             display: none;   
-        }
-        
-    </style>
-    
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-  <h1>Before starting the game players should choose between X or O</h1>
-   
-   <input type="button" id="startGame" value="Start game" onclick="newGame.startGame()">
-   <input type="button" id="startNewGame" value="Start a new game" onclick="newGame.startNewGame()">
-   
-   <h3 id="message"></h3>
+    <h1>Before starting the game players should choose between X or O</h1>
+    
+    <input type="button" id="startGame" value="Start game" onclick="newGame.startGame()">
+    <input type="button" id="startNewGame" value="Start a new game" onclick="newGame.startNewGame()" style="display: none">
+
+    <h2 id="message"></h2>
     <table border="1" id="gameBoard">
         <tr>
             <td class="cells" id="num1" onclick="newGame.play(this)"></td>
@@ -48,9 +31,9 @@
             <td class="cells" id="num9" onclick="newGame.play(this)"></td>
         </tr>
     </table>
-    
-    
-    
+
+
+
     <script src="ticTacToe.js"></script>
     <script src="main.js"></script>
 </body>

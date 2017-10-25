@@ -3,4 +3,3 @@
 
 
 let newGame = new createGame(document.getElementById('gameBoard'), document);
-

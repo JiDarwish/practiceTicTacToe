@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+.cells {
+    width: 9rem;
+    height: 9rem;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+
+
+#gameBoard {
+    width: 50%;
+    margin: 0 auto;
+    display: none;
+}
+
+
+
+h2 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    
+}
