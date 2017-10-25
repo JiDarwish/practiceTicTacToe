@@ -32,6 +32,10 @@ describe('currentGame methods', () => {
         it('Should have startGame method', () => {
             expect(currentGame.startGame).toBeDefined();
         });
+    
+        it('Should have startNewGame method', () => {
+            expect(currentGame.startNewGame).toBeDefined();
+        });
         
         it('Should have play method', () => {
             expect(currentGame.play).toBeDefined();

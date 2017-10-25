@@ -8,7 +8,7 @@ function createGame(element,body) {
     this.winner = false;
 }
 
-
+//Mthod will run once players start and will decide who starts and display the board
 createGame.prototype.startGame = function () {
     if (this.turn == '') {
         if (Math.random() > 0.5) {
@@ -23,7 +23,12 @@ createGame.prototype.startGame = function () {
     this.body.getElementById('startNewGame').style.display = 'initial';
     this.body.getElementById('startGame').style.display = 'none';
 }
-
+//method invoked by pressing button will clear all the cells
+createGame.prototype.startNewGame = function () {
+    this.winner = false;
+    this.turn = '';
+    this.clearAll();
+}
 
 //once a cell is clicked by whtever player
 createGame.prototype.play = function (element) {
@@ -65,7 +70,6 @@ createGame.prototype.checkBox = function (num) {
     return this.body.getElementById('num' + num).innerHTML;
 }
 
-
 //When a player finishes his move it swaps turns
 createGame.prototype.swapturn = function (turn) {
     if (this.getWinner()) {
@@ -81,8 +85,15 @@ createGame.prototype.message = function (mes) {
     this.body.getElementById('message').innerHTML = mes;
 }
 
-
-
+//Will clear all the boxes once called
+createGame.prototype.clearAll = function(){
+    console.log();
+    for(let i = 0; i <= 9; i++){
+        if(document.getElementById('num'+i) != null){
+        document.getElementById('num' + i).innerHTML = '';
+        }
+    }
+}
 
 //Exporting the createGame function
 if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
